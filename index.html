@@ -14,9 +14,9 @@
                 extend: {
                     colors: {
                         brand: {
-                        light: '#e0f2ff',       // soft baby blue, gentle background
-                        DEFAULT: '#2563eb',     // vivid blue, great for primary actions
-                        dark: '#1e40af',        // deep bold blue, strong hover/focus
+                            light: '#e0f2ff',       // soft baby blue, gentle background
+                            DEFAULT: '#2563eb',     // vivid blue, great for primary actions
+                            dark: '#1e40af',        // deep bold blue, strong hover/focus
                         }
                     }
                 }
@@ -25,14 +25,14 @@
     </script>
     <style type="text/tailwindcss">
         body {
-            @apply h-screen overflow-hidden font-sans;
+            @apply font-sans;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230e7490' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         .news-icon {
             filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
         }
         .container {
-            @apply h-screen;
+            @apply min-h-screen py-4;
         }
         .pulse-ring {
             animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -62,26 +62,26 @@
         }
     </style>
 </head>
-<body class="px-0 py-9">
+<body class="bg-gray-50">
     <div class="container mx-auto flex items-center justify-center p-4">
-        <div class="w-full max-w-md overflow-hidden rounded-2xl shadow-xl bg-white border border-gray-100">
+        <div class="w-full max-w-md rounded-2xl shadow-xl bg-white border border-gray-100 my-4">
             <!-- Header with wave design -->
             <div class="relative bg-gradient-to-r from-brand to-brand-dark p-6 text-white clickable">
                 <div class="relative z-10">
                     <div class="flex items-center justify-between">
                         <div>
-                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-white/20 rounded-full mb-2">E-CAMEL NEWS UPDATES</span>
-                            <h1 class="text-3xl font-bold leading-tight">Stay Ahead<br>With Daily Updates</h1>
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-white/20 rounded-full mb-2">BREAKING NEWS</span>
+                            <h1 class="text-2xl md:text-3xl font-bold leading-tight">Stay Ahead<br>With Daily Updates</h1>
                         </div>
                         <div class="relative">
                             <div class="absolute inset-0 rounded-full bg-white/20 pulse-ring"></div>
-                            <svg class="h-16 w-16 news-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="h-12 w-12 md:h-16 md:w-16 news-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M19 5v14H5V5h14zm0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" fill="white"/>
                                 <path d="M14 17H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="white"/>
                             </svg>
                         </div>
                     </div>
-                    <p class="mt-3 text-white/90 text-sm">Get Daily news alerts directly on your phone. No app required!</p>
+                    <p class="mt-3 text-white/90 text-sm">Get Daily News alerts directly on your phone. No app required!</p>
                 </div>
                 <!-- Wave design at bottom of header -->
                 <div class="absolute bottom-0 left-0 right-0">
@@ -92,17 +92,15 @@
             </div>
 
             <!-- Content -->
-            <div class="p-6">
+            <div class="p-4 md:p-6">
                 <!-- Phone mockup with message -->
-                <div class="flex justify-center mb-6 clickable">
-                    <div class="relative w-32 h-56 bg-gray-900 rounded-xl overflow-hidden border-4 border-gray-800">
+                <div class="flex justify-center mb-4 md:mb-6 clickable">
+                    <div class="relative w-24 h-44 md:w-32 md:h-56 bg-gray-900 rounded-xl overflow-hidden border-4 border-gray-800">
                         <div class="absolute top-0 left-0 right-0 h-6 bg-gray-800 flex justify-center items-center">
                             <div class="w-16 h-1.5 bg-gray-700 rounded-full"></div>
                         </div>
-                    
                         <div class="pt-7 px-2 pb-2 h-full bg-gradient-to-b from-gray-100 to-gray-200">
                             <div class="bg-white rounded-lg p-2 shadow-sm mb-2">
-                                <div class="text-[12px] font-large text-brand-dark">8668</div>
                                 <div class="text-[8px] font-medium text-brand-dark">Daily News</div>
                                 <div class="text-[7px] text-gray-600">Today's top story: Tech innovations changing how we work</div>
                             </div>
@@ -114,22 +112,22 @@
                 </div>
 
                 <!-- Benefits -->
-                <div class="space-y-3">
-                    <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg clickable">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <div class="space-y-2 md:space-y-3">
+                    <div class="flex items-center gap-2 md:gap-3 bg-gray-50 p-2 md:p-3 rounded-lg clickable">
+                        <div class="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-full bg-brand/10 text-brand">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-medium">Verified & Trusted Sources</h3>
+                            <h3 class="font-medium text-sm md:text-base">Verified & Trusted Sources</h3>
                             <p class="text-xs text-gray-600">Curated from reliable news outlets</p>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg clickable">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <div class="flex items-center gap-2 md:gap-3 bg-gray-50 p-2 md:p-3 rounded-lg clickable">
+                        <div class="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center rounded-full bg-brand/10 text-brand">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="9" cy="7" r="4"></circle>
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -137,20 +135,18 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-medium">Personalized Content</h3>
+                            <h3 class="font-medium text-sm md:text-base">Localized Content</h3>
                             <p class="text-xs text-gray-600">Topics that matter to you</p>
                         </div>
                     </div>
                 </div>
 
-
-
-                <button id="subscribe-btn" class="mt-5 w-full rounded-lg bg-brand py-3 px-4 font-medium text-white hover:bg-brand-dark transition-colors flex items-center justify-center shadow-lg shadow-brand/20">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                <button id="subscribe-btn" class="mt-4 md:mt-5 w-full rounded-lg bg-brand py-2 md:py-3 px-4 font-medium text-white hover:bg-brand-dark transition-colors flex items-center justify-center shadow-lg shadow-brand/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
-                    Subscribe
-                </button>       
+                    Subscribe via SMS
+                </button>
                 <div class="mt-6 rounded-lg bg-gray-50 p-3 text-center text-xs text-gray-600 border border-gray-100">
                     By clicking the button above, you agree to receive daily news updates via SMS. <a href="#" id="tc-link" class="text-brand font-medium">T&C apply</a>.
                 </div>
@@ -161,9 +157,9 @@
     <!-- Terms and Conditions Modal -->
     <div id="tc-modal" class="modal">
         <div class="modal-content">
-            <div class="p-6">
+            <div class="p-4 md:p-6">
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-xl font-bold text-gray-900">Terms & Conditions</h2>
+                    <h2 class="text-lg md:text-xl font-bold text-gray-900">Terms & Conditions</h2>
                     <button id="close-modal" class="text-gray-500 hover:text-gray-700">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
